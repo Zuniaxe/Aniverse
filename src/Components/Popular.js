@@ -36,11 +36,11 @@ function Popular({rendered}) {
 const PopularStyled = styled.div`
     display: flex;
     .popular-anime{
-        margin-top: 2rem;
+        margin-top: 0rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
         padding-left: 2rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
@@ -49,12 +49,12 @@ const PopularStyled = styled.div`
         border-top: 5px solid #38a8d1;
     }
     a{
-        height: 180px;
+        height: 110px;
         border-radius: 7px;
     }
     .popular-anime img {
         width: 90%; /* Adjust the image size by changing the width value */
-        height: auto; /* Maintain aspect ratio */
+        height: 90%; /* Maintain aspect ratio */
     }
         @media (min-width: 640px) {
             .popular-anime{

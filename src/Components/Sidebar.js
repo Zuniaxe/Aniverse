@@ -13,7 +13,9 @@ function Sidebar() {
 
     return (
         <SidebarStyled>
-            <h3>Top 5 Popular
+            <h3>Top 5 
+            </h3>
+            <h3>Anime
             </h3>
             <div className="anime">
                 {sorted?.slice(0,5).map((anime) => {
@@ -30,18 +32,52 @@ function Sidebar() {
 }
 
 const SidebarStyled = styled.div`
+
+    margin-top: 0rem;
+    background-color: #2d2d2d;
+    border-top: 5px solid #38a8d1;
+    padding-right: 0rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    .anime{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2rem;
+        width: 80px;
+        img{
+            width: 100%;
+            height:auto;
+            border-radius: 5px;
+   
+        }
+        a{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            color: #adabab;
+            padding-right: 1rem;
+                font-size: 13px;
+            
+        }
+        }
+    }
+
+@media (min-width: 640px) {
     margin-top: 2rem;
     background-color: #2d2d2d;
     border-top: 5px solid #38a8d1;
-    padding-right: 2rem;
+    padding-right: 0rem;
     padding-left: 2rem;
     padding-top: 2rem;
     .anime{
         display: flex;
         flex-direction: column;
+        grid-gap: 5rem;
         width: 150px;
         img{
             width: 100%;
+            height:auto;
             border-radius: 5px;
    
         }
@@ -51,8 +87,11 @@ const SidebarStyled = styled.div`
             flex-direction: column;
             gap: .4rem;
             color: #adabab;
+            padding-right: 2rem;
             h4{
                 font-size: 1.1rem;
+            }
+    
             }
         }
     }

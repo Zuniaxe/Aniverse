@@ -83,8 +83,8 @@ const HomepageStyled = styled.div`
             margin-bottom: 3rem;
             font-size: 15px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: left;
+            justify-content: left;
             @media (min-width: 640px) {
                 font-size: 25px;
             }

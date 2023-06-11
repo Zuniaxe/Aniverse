@@ -55,7 +55,9 @@ function AnimeItem() {
             <div className="details">
                 <div className="detail">
                     <div className="image">
-                        <img src={images?.jpg.large_image_url} alt="" />
+                        <img src={images?.jpg.large_image_url} 
+                        alt="" 
+                        style={{ width: '250px', height: '350px' }}/>
                     </div>
                     <div className="anime-details">
                         <p>
@@ -144,6 +146,132 @@ function AnimeItem() {
 }
 
 const AnimeItemStyled = styled.div`
+
+    padding: 3rem 2rem;
+    background-color: #000000;
+    h1 {
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        color: #38a8d1;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            transform: skew(-3deg);
+        }
+    
+    }
+    .title {
+        display: inline-block;
+        margin: 3rem 0;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #38a8d1;
+    }
+
+    .description {
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #adabab;
+        line-height: 1.7rem;
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #38a8d1;
+            font-weight: 500;
+        }
+    }
+
+    .trailer-con {
+        position: relative;
+        left: 34%;
+        width: 40%;
+        height: 500px;
+        padding-bottom: 1%;
+        margin-top: 3rem;
+        
+    
+        iframe {
+            position: relative;
+            
+            right: 80%;
+            width: 240%;
+            height: 60%;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            background-color: #2d2d2d;
+        }
+    }
+    
+
+    .details {
+        background-color: #2d2d2d;
+        border-radius: 20px;
+        padding: 2rem;
+
+        .detail {
+            display: grid;
+            grid-template-columns: repeat(100px, 1fr);
+            img {
+                border-radius: 7px;
+            }
+        }
+        .anime-details {
+            display: flex;
+            padding-top: 3rem;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-between;
+            p {
+                display: absolute;
+                gap: 1rem;
+                justify-content: left;
+                font-size: 1rem;
+                
+            }
+            p span:first-child {
+                font-weight: 550;
+                color: #adabab;
+            }
+        }
+    }
+
+    .characters {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-gap: 1 rem;
+        background-color: #2d2d2d;
+        padding: 0rem;
+        border-radius: 20px;
+        border: 5px solid #2d2d2d;
+        .character {
+            padding: 1.4rem 0.6rem;
+            border-radius: 7px;
+            background-color: #2d2d2d;
+            transition: all 0.4s ease-in-out;
+            img {
+                width: 100%;
+            }
+            h4 {
+                padding: 0.5rem 0;
+                font-size: 0.9rem;
+                color: #adabab;
+            }
+            p {
+                font-size: 0.9rem;
+                color: #38a8d1;
+            }
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }                                           
+
+@media (min-width: 640px) {
     padding: 3rem 2rem;
     background-color: #000000;
     h1 {
@@ -182,9 +310,9 @@ const AnimeItemStyled = styled.div`
 
     .trailer-con {
         position: relative;
-        left: 30%;
-        width: 50%;
-        height: 500px;
+        left: 15%;
+        width: 70%;
+        height: 700px;
         padding-bottom: 1%;
         margin-top: 3rem;
         
@@ -257,7 +385,7 @@ const AnimeItemStyled = styled.div`
                 transform: translateY(-5px);
             }
         }
-    }
+    }                                           }
 `;
 
 export default AnimeItem;
