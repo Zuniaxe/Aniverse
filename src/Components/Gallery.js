@@ -53,7 +53,7 @@ function Gallery() {
 }
 
 const GalleryStyled = styled.div`
-    background-color: #EDEDED;
+    background-color: #000000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,9 +75,9 @@ const GalleryStyled = styled.div`
         display: inline-block;
         padding: 2rem;
         margin: 2rem 0;
-        background-color: #fff;
+        background-color: #2d2d2d;
         border-radius: 7px;
-        border: 5px solid #e5e7eb;
+        border: 5px solid #2d2d2d;
         position: relative;
         img{
             width: 350px;
@@ -92,14 +92,14 @@ const GalleryStyled = styled.div`
         padding: 2rem;
         border-radius: 7px;
         background-color: #fff;
-        border: 5px solid #e5e7eb;
+        border: 5px solid #2d2d2d;
         img{
             width: 6rem;
             height: 6rem;
             object-fit: cover;
             cursor: pointer;
             border-radius: 5px;
-            border: 3px solid #e5e7eb;
+            border: 3px solid #2d2d2d;
         } 
     }
 `;
